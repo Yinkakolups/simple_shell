@@ -52,39 +52,6 @@ char *dup_chars(char *pathstr, int start, int stop)
  */
 char *find_path(info_t *info, char *pathstr, char *cmd)
 {
-<<<<<<< HEAD
-int i = 0, curr_pos = 0;
-char *path;
-
-if (!pathstr)
-return (NULL);
-if ((_strlen(cmd) > 2) && starts_with(cmd, "./"))
-{
-if (is_cmd(info, cmd))
-return (cmd);
-}
-while (1)
-{
-if (!pathstr[i] || pathstr[i] == ':')
-{
-path = dup_chars(pathstr, curr_pos, i);
-if (!*path)
-_strcat(path, cmd);
-else
-{
-_strcat(path, "/");
-_strcat(path, cmd);
-}
-if (is_cmd(info, path))
-return (path);
-if (!pathstr[i])
-break;
-curr_pos = i;
-}
-i++;
-}
-return (NULL);
-=======
 	int i = 0, curr_pos = 0;
 	char *path;
 
@@ -116,5 +83,4 @@ return (NULL);
 		i++;
 	}
 	return (NULL);
->>>>>>> b3e45392d603ad9639180d879cf69e7e506f7962
 }

@@ -9,21 +9,8 @@
 
 char **strtow(char *str, char *d)
 {
-<<<<<<< HEAD
-int i, j, k, m, numwords = 0;
-char **s;
-
-if (str == NULL || str[0] == 0)
-return (NULL);
-if (!d)
-d = " ";
-for (i = 0; str[i] != '\0'; i++)
-if (!is_delim(str[i], d) && (is_delim(str[i + 1], d) || !str[i + 1]))
-numwords++;
-=======
 	int i, j, k, m, numwords = 0;
 	char **s;
->>>>>>> b3e45392d603ad9639180d879cf69e7e506f7962
 
 	if (str == NULL || str[0] == 0)
 		return (NULL);
